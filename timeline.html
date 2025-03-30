@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesjonell Historisk Tidslinje</title>
+    <!-- Timeline.js CSS -->
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <!-- Egen styling for tilpasninger -->
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f5f2e9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #8b4513;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        
+        #timeline-embed {
+            width: 90%;
+            height: 700px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            background-color: white;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            background-color: #8b4513;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            #timeline-embed {
+                width: 95%;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Historisk Tidslinje</h1>
+        <p>Viktige hendelser i verdenshistorien</p>
+    </div>
+
+    <div id="timeline-embed"></div>
+
+    <div class="footer">
+        <p>Kilde: Historiske arkiver og anerkjente historikere</p>
+        <p>&copy; 2023 Historisk Tidslinje Prosjekt</p>
+    </div>
+
+    <!-- Timeline.js JavaScript -->
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    
+    <script>
+        // Omfattende historiske data
+        const historicalEvents = {
+            title: {
+                text: {
+                    headline: "Verdenshistorisk Tidslinje",
+                    text: "<p>En visuell fremstilling av viktige hendelser som har formet vår verden</p>"
+                }
+            },
+            events: [
+                {
+                    start_date: { year: "3000", month: "01", day: "01" },
+                    text: {
+                        headline: "Sumerisk skrift oppstår",
+                        text: "De første skriftsystemene utvikles i Mesopotamia, begynnelsen på registrert historie."
+                    },
+                    media: {
+                        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sumerian_26th_c_Adab.jpg/320px-Sumerian_26th_c_Adab.jpg",
+                        caption: "Tidlig sumerisk skrift på leirtavle",
+                        credit: "Wikimedia Commons"
+                    },
+                    group: "Oldtiden"
+                },
+                {
+                    start_date: { year: "776" },
+                    text: {
+                        headline: "Første olympiske leker",
+                        text: "De første registrerte olympiske leker finner sted i Olympia, Hellas."
+                    },
+                    media: {
+                        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ancient_Olympic_Stadium.jpg/320px-Ancient_Olympic_Stadium.jpg",
+                        caption: "Det antikke olympiske stadion",
+                        credit: "Wikimedia Commons"
+                    },
+                    group: "Antikken"
+                },
+                {
+                    start_date: { year: "1066", month: "10", day: "14" },
+                    text: {
+                        headline: "Slaget ved Hastings",
+                        text: "Vilhelm Erobreren beseirer Harald Godwinson og blir konge av England, begynnelsen på normannisk England."
+                    },
+                    media: {
+                        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bayeux_Tapestry_scene57_harold_death.jpg/320px-Bayeux_Tapestry_scene57_harold_death.jpg",
+                        caption: "Billedveven av Bayeux viser slaget",
+                        credit: "Wikimedia Commons"
+                    },
+                    group: "Middelalderen"
+                },
+                {
+                    start_date: { year: "1455" },
+                    end_date: { year: "1485" },
+                    text: {
+                        headline: "Rosekrigene i England",
+                        text: "En serie borgerkriger mellom husene Lancaster og York om den engelske tronen."
+                    },
+                    media: {
+                        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Battle_of_Barnet_1471.jpg/320px-Battle_of_Barnet_1471.jpg",
+                        caption: "Slaget ved Barnet under rosekrigene",
+                        credit: "Wikimedia Commons"
+                    },
+                    group: "Middelalderen"
+                },
+                {
+                    start_date: { year: "1492", month: "10", day: "12" },
+                    text: {
+                        headline: "Columbus når Amerika",
+                        text: "Christofer Columbus' ekspedisjon når Karibia, markerer begynnelsen på europeisk kolonisering av Amerika."
+                    },
+                    media: {
+                        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Landing_of_Columbus_%281%29.jpg/320px-Landing_of_Columbus_%281%29.jpg",
+                        caption: "Columbus går i land i Den nye verden",
+                        credit: "Wikimedia Commons"
+                    },
+                    group: "Oppdagelsestiden"
+                },
+                {
+                    start_date: { year: "1789", month: "07", day: "14" },
+                    text: {
+                        headline: "Den franske revolusjon",
+                        text: "Bastillens fall markerer begynnelsen på den franske revolusjonen som førte til monarkiets fall."
+                    },
+                    media: {
+                        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Prise_de_la_Bastille.jpg/320px-Prise_de_la_Bastille.jpg",
+                        caption: "Stormingen av Bastillen",
+                        credit: "Wikimedia Commons"
+                    },
+                    group: "Moderne tid"
+                },
+                {
+                    start_date: { year: "1914", month: "07", day: "28" },
+                    end_date: { year: "1918", month: "11", day: "11" },
+                    text: {
+                        headline: "Første verdenskrig",
+                        text: "En global krig som involverte verdens stormakter, med millioner av døde som resultat."
+                    },
+                    media: {
+                        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bundesarchiv_Bild_183-R55519%2C_Westfront%2C_verwundete_Engl%C3%A4nder.jpg/320px-Bundesarchiv_Bild_183-R55519%2C_Westfront%2C_verwundete_Engl%C3%A4nder.jpg",
+                        caption: "Skadede soldater under første verdenskrig",
+                        credit: "Wikimedia Commons"
+                    },
+                    group: "Moderne tid"
+                },
+                {
+                    start_date: { year: "1969", month: "07", day: "20" },
+                    text: {
+                        headline: "Månelandingen",
+                        text: "Apollo 11-misjonen lander på månen, Neil Armstrong blir det første mennesket som setter foten på månen."
+                    },
+                    media: {
+                        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/320px-Aldrin_Apollo_11_original.jpg",
+                        caption: "Buzz Aldrin på månen",
+                        credit: "NASA"
+                    },
+                    group: "Moderne tid"
+                }
+            ]
+        };
+
+        // Initialiser tidslinjen
+        window.timeline = new TL.Timeline('timeline-embed', historicalEvents, {
+            scale: 'human',
+            timenav_position: 'bottom',
+            initial_zoom: 5,
+            language: 'no',
+            marker_padding: 20,
+            start_at_slide: 4
+        });
+    </script>
+</body>
+</html>
